@@ -48,7 +48,7 @@ Top Projects: ${projects.slice(0, 3).map((p) => p.name).join(', ')}
     }
 
     const data = await response.json();
-    const reply = data?.choices?.[0]?.message?.content?.replace(/OpenRouter|OpenAI|DeepSeek|GPT/gi, "VinhNguyen");
+    const reply = data?.choices?.[0]?.message?.content?.replace?.(/OpenRouter|OpenAI|DeepSeek|GPT/gi, "VinhNguyen");
     return NextResponse.json({ reply });
   } catch (error) {
     console.error('Error in chat API:', error);

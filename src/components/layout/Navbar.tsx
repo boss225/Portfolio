@@ -38,6 +38,10 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, []);
 
+  const scrollToHome = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <nav
       className="fixed top-0 w-full z-50 border-b"
@@ -51,7 +55,8 @@ export default function Navbar() {
       <div className="flex justify-between items-center px-30 py-2 mx-auto">
         {/* Logo */}
         <Link
-          href="#home"
+          href="/"
+          onClick={scrollToHome}
           className="text-xl font-bold tracking-tighter flex items-center gap-2"
           style={{ color: 'var(--color-primary)', fontFamily: 'var(--font-headline)' }}
           aria-label="Nguyen Dang Vinh - Home"
