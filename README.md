@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Personal Portfolio Website
 
-## Getting Started
+A modern, interactive, and responsive personal portfolio website built with cutting-edge web technologies. This project showcases my skills, projects, and professional experience, featuring a sleek design, 3D elements, and advanced animations. Additionally, it integrates an AI-powered chatbot to enhance user interaction.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Modern Tech Stack**: Built with [Next.js App Router](https://nextjs.org/), [React 19](https://react.dev/), and [TypeScript](https://www.typescriptlang.org/).
+- **Stunning UI/UX**: Styled with [Tailwind CSS v4](https://tailwindcss.com/) and animated using [Framer Motion](https://www.framer.com/motion/).
+- **3D Interactive Elements**: Integrated [Three.js](https://threejs.org/) using `@react-three/fiber` and `@react-three/drei` for immersive 3D experiences.
+- **AI Chatbot Integration**: Includes an intelligent assistant powered by Deepseek via OpenRouter API, providing visitors with an interactive way to ask questions about my portfolio.
+- **Fully Responsive**: Optimized for seamless viewing across all devices (Desktop, Tablet, Mobile).
+- **Beautiful Icons**: Utilizing `lucide-react` and `react-icons` for scalable, crisp iconography.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework**: Next.js 16
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **Animations**: Framer Motion
+- **3D Graphics**: Three.js, React Three Fiber
+- **Icons**: Lucide React, React Icons
+- **AI Integration**: OpenRouter API (Deepseek model)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Getting Started
 
-## Learn More
+Follow these steps to set up the project locally on your machine.
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Make sure you have Node.js and npm (or yarn/pnpm/bun) installed.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Installation
 
-## Deploy on Vercel
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/portfolio.git
+   cd portfolio
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   # or
+   bun install
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. **Set up environment variables:**
+   Create a `.env.local` file in the root directory and add your OpenRouter API key for the AI chatbot functionality:
+   ```env
+   OPENROUTER_API_KEY=your_api_key_here
+   ```
+
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
+   ```
+
+5. **Open your browser:**
+   Navigate to [http://localhost:3000](http://localhost:3000) to see the result. You can start editing the page by modifying `src/app/page.tsx`.
+
+## 📁 Project Structure
+
+- `src/app/`: Next.js App Router pages, layout, and global styles.
+- `src/components/`: Reusable UI components, layout elements (e.g., Navbar), and sections (e.g., Projects, Contact).
+- `src/app/api/`: Next.js API routes, including the chatbot integration (`/api/chat/route.ts`).
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## 📝 License
+
+This project is open-source and available under the [MIT License](LICENSE).
