@@ -6,8 +6,8 @@ import Image from 'next/image';
 import { siteConfig } from '@/data/portfolio';
 
 const navLinks = [
-  { href: '#experience', label: 'Experience' },
   { href: '#skills', label: 'Skills' },
+  { href: '#experience', label: 'Experience' },
   { href: '#projects', label: 'Projects' },
   { href: '#contact', label: 'AI Support' },
 ];
