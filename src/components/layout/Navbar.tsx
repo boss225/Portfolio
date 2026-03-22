@@ -52,20 +52,26 @@ export default function Navbar() {
       }}
       aria-label="Main navigation"
     >
-      <div className="flex justify-between items-center px-30 py-2 mx-auto">
+      <div className="flex justify-between items-center px-4 sm:px-6 md:px-12 lg:px-20 xl:px-30 py-2 mx-auto max-w-screen-2xl">
         {/* Logo */}
         <Link
           href="/"
           onClick={scrollToHome}
-          className="text-xl font-bold tracking-tighter flex items-center gap-2"
+          className="text-lg sm:text-xl font-bold tracking-tighter flex items-center gap-2"
           style={{ color: 'var(--color-primary)', fontFamily: 'var(--font-headline)' }}
           aria-label="Nguyen Dang Vinh - Home"
         >
-          <Image src="/images/logo.png" alt="Logo" width={50} height={50} />
+          <Image 
+            src="/images/logo.png" 
+            alt="Logo" 
+            width={40} 
+            height={40}
+            className="sm:w-[50px] sm:h-[50px]"
+          />
         </Link>
 
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-8" style={{ fontFamily: 'var(--font-headline)' }}>
+        {/* Desktop/Tablet Nav */}
+        <div className="hidden md:flex items-center space-x-4 lg:space-x-8" style={{ fontFamily: 'var(--font-headline)' }}>
           {navLinks.map(({ href, label }) => {
             const sectionId = href.replace('#', '');
             const isActive = activeSection === sectionId;
@@ -73,7 +79,7 @@ export default function Navbar() {
               <a
                 key={href}
                 href={href}
-                className="transition-all hover:scale-105 pb-1"
+                className="transition-all hover:scale-105 pb-1 text-sm lg:text-base"
                 style={{
                   color: isActive ? 'var(--color-primary)' : 'var(--color-on-surface-variant)',
                   borderBottom: isActive ? '2px solid var(--color-primary)' : '2px solid transparent',
@@ -96,7 +102,7 @@ export default function Navbar() {
           href={siteConfig.resumePdf}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:inline-flex px-6 py-2 rounded-lg font-bold transition-all hover:scale-105 active:scale-95"
+          className="hidden md:inline-flex px-4 lg:px-6 py-2 rounded-lg font-bold text-sm lg:text-base transition-all hover:scale-105 active:scale-95"
           style={{
             background: 'var(--color-primary)',
             color: 'var(--color-on-primary)',
@@ -119,14 +125,14 @@ export default function Navbar() {
           aria-label="Toggle mobile menu"
           aria-expanded={menuOpen}
         >
-          <span className="material-symbols-outlined">{menuOpen ? 'close' : 'menu'}</span>
+          <span className="material-symbols-outlined text-2xl">{menuOpen ? 'close' : 'menu'}</span>
         </button>
       </div>
 
       {/* Mobile dropdown */}
       {menuOpen && (
         <div
-          className="md:hidden px-8 pb-6 flex flex-col gap-4"
+          className="md:hidden px-4 sm:px-6 pb-6 flex flex-col gap-4"
           style={{ fontFamily: 'var(--font-headline)' }}
         >
           {navLinks.map(({ href, label }) => (
