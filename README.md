@@ -48,13 +48,7 @@ Make sure you have Node.js and npm (or yarn/pnpm/bun) installed.
    bun install
    ```
 
-3. **Set up environment variables:**
-   Create a `.env.local` file in the root directory and add your OpenRouter API key for the AI chatbot functionality:
-   ```env
-   OPENROUTER_API_KEY=your_api_key_here
-   ```
-
-4. **Run the development server:**
+3. **Run the development server:**
    ```bash
    npm run dev
    # or
@@ -65,7 +59,7 @@ Make sure you have Node.js and npm (or yarn/pnpm/bun) installed.
    bun dev
    ```
 
-5. **Open your browser:**
+4. **Open your browser:**
    Navigate to [http://localhost:3000](http://localhost:3000) to see the result. You can start editing the page by modifying `src/app/page.tsx`.
 
 ## 📁 Project Structure

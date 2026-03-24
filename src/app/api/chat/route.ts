@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { siteConfig, skills, projects, contact } from '@/data/portfolio';
+import { siteConfig, skills, projects } from '@/data/portfolio';
 
 export async function POST(req: Request) {
   try {
@@ -32,7 +32,7 @@ Top Projects: ${projects.slice(0, 3).map((p) => p.name).join(', ')}
         'X-Title': 'Vinh Portfolio AI',
       },
       body: JSON.stringify({
-        model: 'deepseek/deepseek-chat', // Use the standard routing for DeepSeek-V3
+        model: 'openai/gpt-5.4-nano',
         messages: [
           { role: 'system', content: context.trim() },
           ...messages
